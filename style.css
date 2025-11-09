@@ -1,0 +1,186 @@
+:root {
+    --primary: #004D40;
+    --secondary: #00796B; 
+    --accent: #FFC107; 
+    --text-white: #FAFAF5; 
+    --text: #2C2C2C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--text-white);
+    align-items: center;
+    justify-content: start;
+}
+
+.home {
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+    width: 100%;
+    color: var(--text-white);
+    padding-top: 7em;
+    padding-bottom: 4em;
+    padding-inline: 2em;
+}
+
+.home header {
+    width: 100%;
+    padding-block: 2em;
+    padding-inline: 1em;
+    position: fixed;
+    top: 0;
+}
+
+.home nav > ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1em;
+    list-style-type: none;
+}
+
+.home nav > ul > li > a {
+    padding: 14px 16px;
+    color: var(--text-white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.home nav > ul > li > a:hover {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+#menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.home h1 {
+    max-width: 80ch;
+    text-align: center;
+}
+
+h1,h2,h3,h4 {
+    text-align: center;
+}
+
+main {
+    align-items: center;
+    justify-content: start;
+    max-width: 85%;
+    padding-block: 2em;
+    gap: 1em;
+}
+
+main p {
+    color: var(--text);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+main h2 {
+    color: var(--text);
+    font-size: 1.7rem;
+}
+
+main h3{
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
+main strong, h5 {
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+main ul li{
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+main span {
+    font-weight: 900;
+}
+
+hr {
+    height: 3px;
+    border: none;
+    border-radius: 16px;
+    width: 100%;
+    background-color: var(--accent);
+    margin-block: 1em;
+}
+
+footer {
+    padding-block: 2em;
+    text-align: center;
+    width: 100%;
+    color: var(--text-white);
+}
+
+@media all and (max-width: 530px) {
+    .home header {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-block: 1em;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .home header > #menu-toggle {
+        display: block;
+    }
+
+    .home nav {
+        position: absolute;
+        top: 75px;
+        right: 5px;
+        width: 95%;
+        max-width: 430px;
+        padding-block: 35px;
+        border-radius: 8px;
+        background-color: var(--text-white);
+        z-index: 100;
+    }
+
+    .home nav ul {
+        flex-direction: column;
+        height: fit-content;
+        gap: 3em;
+    }
+
+    .home nav ul li a {
+        color: var(--primary);
+    }
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
