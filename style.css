@@ -31,10 +31,17 @@ body {
 
 .home header {
     width: 100%;
-    padding-block: 2em;
+    padding-block: 1em;
     padding-inline: 1em;
     position: fixed;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home header img {
+    max-width: 70px;
 }
 
 .home nav > ul {
